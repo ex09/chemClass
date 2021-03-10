@@ -67,7 +67,7 @@ schedule.forEach(data => {
 	table.innerHTML += `
 		<tr>
 			<td>${zfill(i)}.</td>
-			<td>${dayObj.toString().split(" ")[0]}, ${schDate}</td>
+			<td>${schDate}, ${dayObj.toString().split(" ")[0]}</td>
 			<td>${data[1].split("-").join(" ")}</td>
 			<td>${data[2].split("-").join(" ")}</td>
 		</tr>`;
