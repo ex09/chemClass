@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="language" content="english"> 
+	<meta http-equiv="x-ua-compatible" content="ie=edge"/>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    
+	<meta name="format-detection" content="telephone=yes"/>
+	<meta name="HandheldFriendly" content="true"/> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+	<meta name="description" content="The online version of Science Aid SSC preparation class schedule given by Soyed Jamal Sir.">
+	<meta name="keywords" content="Schedule, Class, SSC, preparation"/>
+  	<meta name="author" content="Hind Sagar Biswas">
+	
+	<title>Science Aid SSC - Preparation Class Schedule</title>
+	
+	<meta name="twitter:title" content="Jamal Sir - Preparation Class Schedule"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:site_name" content="Science Aid SSC"/>
+	<meta property="og:url" content="https://hind-sagar-biswas.github.io/kbcQuizzo"/>
+	<meta property="og:title" content="Jamal Sir - Preparation Class Schedule"/>
+	<meta property="og:description" content="The online version of Science Aid SSC preparation class schedule given by Soyed Jamal Sir."/>
+	<meta name="msapplication-TileColor" content="#333"/>
+	<meta name="theme-color" content="#333"/>
+	
+	<link rel="stylesheet" href="style.css">
+	
+	<script src="data.json" defer></script>
+	<script src="app.js" defer></script>
+</head>
+<body>
+ <section id="loader">
+ 	<h1>WELCOME</h1>
+ </section>
+ <section id="stopper">
+	<div>
+		<center>
+			<h1>Science Aid</h1>
+			<h5 id="time1">00:00:00</h5>
+			<br>
+			<h3>Access Code Required</h3>
+			<form name="accessForm" onsubmit="return validateAccess()">
+				<input type="password" name="accessCode" placeholder="Give the Access Code" required>
+				<button type="submit">Access</button>
+			</form>
+			<p id="alert"></p>
+		</center>
+	</div>
+ </section>
+ <header>
+ 	<center>
+ 		<h1>Science Aid</h1>
+ 		<h4>Preparation Class Schedule</h4>
+ 		<h5 id="time2">00:00:00</h5>
+ 	</center>
+ </header>
+ <main>
+	<div class="container">
+		<p>
+			<b>Teacher: </b> <i>Soyed Jamal Hossain</i>
+			<br>
+			<b>Call @ </b>
+			<a href="tel:01921155466">+880 1921-155466</a>
+		</p>
+		<p>
+			<b>Today's Date:</b>
+			<span id="date"></span>
+		</p>
+	</div>
+	<div class="container">
+		<h3 class="mb-1">Today's Schedule</h3>
+		<hr>
+		<p  class="mt-1">
+			<b>Preparation Class:</b>
+			<span id="prep">None</span>
+		</p>
+		<p>
+			<b>Exam:</b>
+			<span id="exam">None</span>
+		</p>
+	</div>
+	<div class="container table-responsive">
+			<table id="table" class="table table-bordered">
+			</table>
+	</div>
+ </main>
+</body>
+</html>

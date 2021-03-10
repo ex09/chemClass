@@ -1,0 +1,128 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: "Monsterrat", sans-serif;
+	font-size: 13px;
+	color: #333;
+	background: #e0e0e0;
+}
+#stopper, #loader{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba( 225, 225, 225, 0.3 );
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.30 );
+	backdrop-filter: blur( 4px );
+	-webkit-backdrop-filter: blur( 4px );
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.3s;
+}
+#stopper div{
+	padding: 10px;
+	background: #fafafa;
+	border-radius: 10px;
+}
+form, #loader{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+#loader{
+	color: #fafafa;
+	background: #333;
+	z-index: 100;
+}
+input, button{
+	height: 35px;
+	border: 2px solid #333;
+	border-radius: 5px;
+	padding: 0 10px;
+	margin: 2px 0;
+	outline: none !important;
+}
+input[type="password"]{
+	font-family: "Monospace", sans-serif;
+}
+button{
+	background: #333;
+	color: #fafafa;
+	font-weight: bold;
+}
+header{
+	background: #333;
+	color: #fafafa;
+	padding: 10px 0;
+	box-shadow: 4px 4px 10px #868686;
+}
+main{
+	padding: 10px;
+	line-height: 25px;
+}
+a{
+	color: #335;
+}
+.container{
+	padding: 10px;
+	margin: 10px 0;
+	background: #e0e0e0;
+	border-radius: 10px;
+	box-shadow: 4px 4px 10px #868686,
+	            -5px -5px 10px #ffffff;
+}
+.mb-1{
+	margin-bottom: 3px;
+}
+.mt-1{
+	margin-top: 3px;
+}
+table.table{
+	width: 100%;
+}
+table.table-bordered{
+	background: #e0e0e0;
+	border-radius: 10px;
+}
+table.table thead{
+	background: #333;
+	color: white;
+}
+table.table tbody{
+	background: #fafafa;
+}
+table.table tbody tr td,
+table.table thead th td{
+	padding: 4px 15px;
+}
+.no{
+	width: 30px;
+}
+.table-responsive{
+	overflow: auto;
+	padding: 0;
+	margin: 10px 0;
+	background: #e0e0e0;
+	border-radius: 10px;
+	box-shadow: 4px 4px 10px #868686,
+	            -5px -45x 10px #ffffff;
+}
+#alert{
+	padding: 10px;
+	color: red;
+	margin: 5px 0;
+}
+
+@media(min-width:768px){
+	.container{
+		width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
