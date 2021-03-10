@@ -48,11 +48,26 @@ schedule.forEach(data => {
 	}
 	
 	var schDateArr = data[0].split("");
-	var schDate = schDateArr[0] + schDateArr[1] + schDateArr[2] + " " + schDateArr[3] + schDateArr[4]
+	var schDate = schDateArr[0] + schDateArr[1] + schDateArr[2] + " " + schDateArr[3] + schDateArr[4];
+	
+	var dayObj = new Date();
+	dayObj.setDate(schDate.split(" ")[1]);
+	switch(schDate.split(" ")[0]) {
+		case "Mar":
+			dayObj.setMonth(2);
+			break;
+		case "Apr":
+			dayObj.setMonth(3);
+			break;
+		case "May":
+			dayObj.setMonth(4);
+			break;
+	}
+	
 	table.innerHTML += `
 		<tr>
 			<td>${zfill(i)}.</td>
-			<td>${schDate}</td>
+			<td>${dayObj.toString().split(" ")[0]}, ${schDate}</td>
 			<td>${data[1].split("-").join(" ")}</td>
 			<td>${data[2].split("-").join(" ")}</td>
 		</tr>`;
