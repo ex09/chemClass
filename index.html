@@ -25,6 +25,9 @@
 	<meta name="msapplication-TileColor" content="#333"/>
 	<meta name="theme-color" content="#333"/>
 	
+	<!--fontawsome-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">	
+	
 	<link rel="stylesheet" href="style.css">
 	
 	<script src="data.json" defer></script>
@@ -52,23 +55,25 @@
  <header>
  	<center>
  		<h1>Science Aid</h1>
- 		<h4>Preparation Class Schedule</h4>
+ 		<h4>Preparation Class Schedule <i class="fas fa-info-circle" id="showInfo"></i></h4>
  		<h5 id="time2">00:00:00</h5>
+ 		<h5 id="date"></h5>
  	</center>
  </header>
  <main>
+ <section class="modal" id="info">
 	<div class="container">
+		<i class="fas fa-window-close" id="close"  style="float: right;"></i>
+		<h2>Teacher</h2>
+		<hr>
 		<p>
 			<b>Teacher: </b> <i>Soyed Jamal Hossain</i>
 			<br>
 			<b>Call @ </b>
 			<a href="tel:01921155466">+880 1921-155466</a>
 		</p>
-		<p>
-			<b>Today's Date:</b>
-			<span id="date"></span>
-		</p>
 	</div>
+ </section>
 	<div class="container">
 		<h3 class="mb-1">Today's Schedule</h3>
 		<hr>
