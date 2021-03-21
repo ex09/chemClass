@@ -89,3 +89,11 @@ if(localStorage.getItem("abledToAccess") == "yes") {
 window.addEventListener("load", () => {
 	document.getElementById("loader").style = "opacity: 0; pointer-events: none;";
 });
+
+document.getElementById("showInfo").addEventListener("click", () => {
+	document.getElementById("info").classList.add("showing");
+});
+
+document.getElementById("close").addEventListener("click", () => {
+	document.getElementById("info").classList.remove("showing");
+});

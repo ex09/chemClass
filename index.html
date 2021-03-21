@@ -19,11 +19,20 @@
 	<meta name="twitter:title" content="Jamal Sir - Preparation Class Schedule"/>
 	<meta property="og:type" content="website"/>
 	<meta property="og:site_name" content="Science Aid SSC"/>
-	<meta property="og:url" content="https://hind-sagar-biswas.github.io/kbcQuizzo"/>
+	<meta property="og:url" content="https://ex09.github.io/chemClass"/>
 	<meta property="og:title" content="Jamal Sir - Preparation Class Schedule"/>
 	<meta property="og:description" content="The online version of Science Aid SSC preparation class schedule given by Soyed Jamal Sir."/>
+	<meta property="og:image" content="siteImg.jpeg">
 	<meta name="msapplication-TileColor" content="#333"/>
 	<meta name="theme-color" content="#333"/>
+	
+	<!-- Favicon -->
+	<meta name="msapplication-TileImage" content="images/favicon.png"> <!-- Windows 8 -->
+	<!--[if IE]><link rel="shortcut icon" href="icon.png"><![endif]-->
+	<link rel="icon" type="image/png" href="icon.png">
+	
+	<!--fontawsome-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">	
 	
 	<link rel="stylesheet" href="style.css">
 	
@@ -52,23 +61,25 @@
  <header>
  	<center>
  		<h1>Science Aid</h1>
- 		<h4>Preparation Class Schedule</h4>
+ 		<h4>Preparation Class Schedule <i class="fas fa-info-circle" id="showInfo"></i></h4>
  		<h5 id="time2">00:00:00</h5>
+ 		<h5 id="date"></h5>
  	</center>
  </header>
  <main>
+ <section class="modal" id="info">
 	<div class="container">
+		<i class="fas fa-window-close" id="close"  style="float: right;"></i>
+		<h2>Teacher</h2>
+		<hr>
 		<p>
 			<b>Teacher: </b> <i>Soyed Jamal Hossain</i>
 			<br>
 			<b>Call @ </b>
 			<a href="tel:01921155466">+880 1921-155466</a>
 		</p>
-		<p>
-			<b>Today's Date:</b>
-			<span id="date"></span>
-		</p>
 	</div>
+ </section>
 	<div class="container">
 		<h3 class="mb-1">Today's Schedule</h3>
 		<hr>

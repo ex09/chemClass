@@ -6,8 +6,12 @@
 body{
 	font-family: "Monsterrat", sans-serif;
 	font-size: 13px;
-	color: #333;
+	color: #fafafa;
 	background: #e0e0e0;
+	background: url(bg.jpeg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 #stopper, #loader{
 	width: 100vw;
@@ -24,6 +28,8 @@ body{
 	justify-content: center;
 	transition: 0.3s;
 }
+#stopper{z-index: 1000;}
+#loader{z-index: 1001;}
 #stopper div{
 	padding: 10px;
 	background: #fafafa;
@@ -74,8 +80,10 @@ a{
 	margin: 10px 0;
 	background: #e0e0e0;
 	border-radius: 10px;
-	box-shadow: 4px 4px 10px #868686,
-	            -5px -5px 10px #ffffff;
+	background: rgba( 225, 225, 225, 0.3 );
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.30 );
+	backdrop-filter: blur( 20px );
+	-webkit-backdrop-filter: blur( 20px );
 }
 .mb-1{
 	margin-bottom: 3px;
@@ -87,15 +95,24 @@ table.table{
 	width: 100%;
 }
 table.table-bordered{
-	background: #e0e0e0;
 	border-radius: 10px;
+	border-collapse: collapse;
 }
 table.table thead{
 	background: #333;
 	color: white;
 }
-table.table tbody{
-	background: #fafafa;
+table, td, th {
+ border: 1px solid #fff;
+}
+th{
+	border-top: 1px solid #333;
+}
+th:first-child{
+	border-left: 1px solid #333;
+}
+th:last-child{
+	border-right: 1px solid #333;
 }
 table.table tbody tr td,
 table.table thead th td{
@@ -108,15 +125,45 @@ table.table thead th td{
 	overflow: auto;
 	padding: 0;
 	margin: 10px 0;
-	background: #e0e0e0;
-	border-radius: 10px;
-	box-shadow: 4px 4px 10px #868686,
-	            -5px -45x 10px #ffffff;
+	background: rgba( 225, 225, 225, 0.3 );
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.30 );
+	backdrop-filter: blur( 20px );
+	-webkit-backdrop-filter: blur( 20px );
 }
 #alert{
 	padding: 10px;
 	color: red;
 	margin: 5px 0;
+}
+
+.modal{
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba( 225, 225, 225, 0.3 );
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.30 );
+	backdrop-filter: blur( 4px );
+	-webkit-backdrop-filter: blur( 4px );
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.3s;
+	width: 100vw;
+	height: 100vh;
+	pointer-events: none;
+	opacity: 0;
+}
+#close{
+	color: red;
+}
+#close:hover,
+#close:focus{
+	color: #ff6915;
+}
+.showing{
+	pointer-events: all;
+	opacity: 1;
 }
 
 @media(min-width:768px){
